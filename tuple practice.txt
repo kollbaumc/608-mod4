@@ -1,0 +1,41 @@
+>>> student_tuple = ('Chris', 'Kollbaum', 5.2)
+>>> len(student_tuple)
+3
+>>> student_tuple
+('Chris', 'Kollbaum', 5.2)
+>>> student_tuple[1]
+'Kollbaum'
+>>> numbers = [1, 2, 3, 4]
+>>> numbers += (6, 7)
+>>> numbers
+[1, 2, 3, 4, 6, 7]
+>>> single = (123.45,)
+>>> single
+(123.45,)
+>>> [1, 2, 3] + (4, 5, 6)
+>>> student_tuple = ('Chris', 'Kollbaum', [100, 54, 87])
+>>> first_name, last_name, grades = student_tuple
+>>> first_name
+'Chris'
+>>> grades
+[100, 54, 87]
+>>> first, second = 'hi'
+>>> print(f'{first}  {second}')
+h  i
+>>> number1 = 99
+>>> number2 = 34
+>>> number1, number2 = (number2, number1)
+>>> print(f'number1 = {number1}: number2 = {number2}')
+number1 = 34: number2 = 99
+>>> colors = ['red', 'orange', 'yellow']
+>>> list(enumerate(colors))
+[(0, 'red'), (1, 'orange'), (2, 'yellow')]
+>>> tuple(enumerate(colors))
+((0, 'red'), (1, 'orange'), (2, 'yellow'))
+>>> for index, value in enumerate(colors):
+...     print(f'{index}:, {value}')
+...
+0:, red
+1:, orange
+2:, yellow
+>>>

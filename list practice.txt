@@ -1,0 +1,52 @@
+>>> c = [1, 2, 5, 3, 3, 6, 7, 12]
+>>> c[0]
+1
+>>> c[4]
+3
+>>> len(c)
+8
+>>> c[100]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> c[1] + c[2] + c[3]
+10
+>>> letters = []
+>>> letters += 'python'
+>>> letters
+['p', 'y', 't', 'h', 'o', 'n']
+>>> list1 = [10, 20, 30]
+>>> list2 = [40, 50]
+>>> concatenated_list = list1 + list2
+>>> concatenated_list
+[10, 20, 30, 40, 50]
+>>> for i in range(len(concatenated_list)):
+...     print(f'{i}: {concatenated_list[i]}')
+...
+0: 10
+1: 20
+2: 30
+3: 40
+4: 50
+>>> a = [1, 2, 3]
+>>> b = [2, 3, 4]
+>>> c = [1, 2, 3, 4, 5, 6]
+>>> a == b
+False
+>>> a > b
+False
+>>> a >= b
+False
+>>> c>b
+False
+>>> c <= b
+True
+>>> def cube_list(values):
+...     for i in range(len(values)):
+...         values[i] **= 3
+...
+>>> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> cube_list(numbers)
+>>> numbers
+[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+>>>
