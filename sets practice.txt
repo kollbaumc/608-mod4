@@ -1,0 +1,26 @@
+ #Displaying unique words in sorted order
+>>> text = 'to be or not to be that is the question'
+>>> unique_words = set(text.split())
+>>> for word in sorted(unique_words):
+...     print(word, end=' ')
+...
+be is not or question that the to >>>
+>>> #deciding if a set is a subset of another set
+>>> set('abc def ghi jkl mno').issubset('hi mom')
+False
+>>> #deciding if a set is a superset of another set
+>>> set('abc def ghi jkl mno').issuperset('hi mom')
+True
+>>> #set operations
+>>> {10, 20, 30} - {5, 10, 15, 20}
+{30}
+>>> #set differences in left but not in right
+>>> {10, 20, 30} ^ {5, 10, 15, 20}
+{5, 30, 15}
+>>> #elements of both sets that are not in common
+>>> {10, 20, 30} | {5, 10, 15, 20}
+{20, 5, 10, 30, 15}
+>>> #union
+>>> {10, 20, 30} & {5, 10, 15, 20}
+{10, 20}
+>>> #intersection
