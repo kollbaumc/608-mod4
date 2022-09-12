@@ -1,0 +1,107 @@
+>>> numbers = list(range(1, 16))
+>>> numbers
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+>>> numbers[1:len(numbers):2]
+[2, 4, 6, 8, 10, 12, 14]
+>>> numbers[5:10] = [0] * len(numbers[5:10])
+>>>
+>>> numbers
+[1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 11, 12, 13, 14, 15]
+>>> numbers[5:] =[]
+>>> numbers
+[1, 2, 3, 4, 5]
+>>> numbers[:] = []
+>>> numbers
+[]
+>>> #Practicing deleting
+>>> numbers = list(range(1, 16))
+>>> numbers
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+>>> del numbers[0:4]
+>>> numbers
+[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+>>> del numbers[::2]
+>>> numbers
+[6, 8, 10, 12, 14]
+>>> foods = ['Cookies', 'pizza', 'Grapes', 'apples', 'steak', 'Bacon']
+>>>
+>>> foods.sort()
+>>> foods
+['Bacon', 'Cookies', 'Grapes', 'apples', 'pizza', 'steak']
+>>> #Sorting
+>>> #Now we will work with indices
+>>> numbers = [67, 45, 23, 78]
+>>> numbers.index(45)
+1
+>>> if 44 in numbers:
+...     print(f'found 44 at index: {numbers.index(44)}')
+... else:
+...     print('44 not found')
+...
+44 not found
+>>> #other methods
+>>> rainbow = ['green', 'orange', 'violet']
+>>> rainbow
+['green', 'orange', 'violet']
+>>> rainbow.append('yellow')
+>>> rainbow
+['green', 'orange', 'violet', 'yellow']
+>>> rainbow.reverse()
+>>> rainbow
+['yellow', 'violet', 'orange', 'green']
+>>> rainbow.remove('orange')
+>>> rainbow
+['yellow', 'violet', 'green']
+>>> #list comprehensions
+>>> cubes = [(x, x **3) for x in range(1, 6)]
+>>> cubes
+[(1, 1), (2, 8), (3, 27), (4, 64), (5, 125)]
+>>> multiples = [x for x in range(3, 30, 3)]
+>>> multiples
+[3, 6, 9, 12, 15, 18, 21, 24, 27]
+>>>
+>>> #generator expressions
+>>> list(x ** 3 for x in [10, 3, 7, 1, 9, 4, 2] if x % 2 == 0)
+[1000, 64, 8]
+>>> #filter, map, reduce 5.14
+>>> numbers = list(range(1, 16))
+>>>
+>>> numbers
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+>>> list(filter(lambda x: x % 2 == 0, numbers)
+... )
+[2, 4, 6, 8, 10, 12, 14]
+>>> list(map(lambda x: x ** 2, numbers))
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225]
+>>> list(map(lambda x: x ** 2, filter(lambda x: x % 2 == 0, numbers)))
+[4, 16, 36, 64, 100, 144, 196]
+>>> #lambda is used to define a function
+>>> far = [41, 32, 212]
+>>> list(map(lambda x: (x, (x -32) * 5 / 9), far))
+[(41, 5.0), (32, 0.0), (212, 100.0)]
+>>> #Other sequence processing functions
+>>> foods = ['Cookies', 'pizza', 'Grapes', 'apples', 'steak','Bacon']
+>>> min(foods)
+'Bacon'
+>>> min(foods, key=lambda s: s.lower())
+'apples'
+>>> #Working with two dimensional lists
+>>> t = [[10, 7, 3], [20, 4, 17]]
+>>> total = 0
+>>> items = 0
+>>> for row in t:
+...     for item in row:
+...         total += item
+...         items += 1
+...
+>>> total/items
+10.166666666666666
+>>> total = 0
+>>> items = 0
+>>> for row in t:
+...     total += sum(row)
+...     items += len(row)
+...
+>>> total/items
+10.166666666666666
+>>>
